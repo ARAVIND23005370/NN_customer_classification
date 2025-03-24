@@ -102,8 +102,8 @@ def train_model(model,train_loader,criterion,optimizer,epochs):
 
 
 ### New Sample Data Prediction
-![alt text](<New Sample Data Prediction.png>)
 
+![alt text](<New Sample Data Prediction.png>)
 
 ## RESULT
 Thus, a neural network classification model for the given dataset as been created successfully.
