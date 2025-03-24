@@ -13,37 +13,37 @@ In their existing market, the sales team has classified all customers into 4 seg
 You are required to help the manager to predict the right group of the new customers.
 
 ## Neural Network Model
-
-![Screenshot 2025-03-23 132501](https://github.com/user-attachments/assets/c5acd878-ab98-4b64-8192-5d2e39e7301d)
-
+<img width="625" alt="Screenshot 2025-03-21 at 9 32 27 AM" src="https://github.com/user-attachments/assets/4b1a57eb-89f1-4897-b674-ff3e6093f17e" />
 
 ## DESIGN STEPS
 
-### STEP 1:
-Understand the classification task and identify input and output variables.
+### Step 1: 
+Import necessary libraries and load the dataset.
 
-### STEP 2:
-Gather data, clean it, handle missing values, and split it into training and test sets.
+### Step 2: 
+Encode categorical variables and normalize numerical features.
 
-### STEP 3:
-Normalize/standardize features, encode categorical labels, and reshape data if needed.
+### Step 3: 
+Split the dataset into training and testing subsets.
 
-### STEP 4:
-Choose the number of layers, neurons, and activation functions for your neural network.
+### Step 4: 
+Design a multi-layer neural network with appropriate activation functions.
 
-### STEP 5:
-Select a loss function (e.g., binary cross-entropy), optimizer (e.g., Adam), and metrics (e.g., accuracy).
+### Step 5: 
+Train the model using an optimizer and loss function.
 
-### STEP 6:
-Feed training data into the model, run multiple epochs, and monitor the loss and accuracy.
+### Step 6: 
+Evaluate the model and generate a confusion matrix.
 
-### STEP 7:
-Save the trained model, export it if needed, and deploy it for real-world use.
+### Step 7: 
+Use the trained model to classify new data samples.
 
+### Step 8: 
+Display the confusion matrix, classification report, and predictions.
 
 ## PROGRAM
 
-### Name: Aravind R
+### Name: ARAVIND R
 ### Register Number: 212223230019
 
 ```python
@@ -60,14 +60,13 @@ class PeopleClassifier(nn.Module):
         x=F.relu(self.fc3(x))
         x=self.fc4(x)
         return x
-        
-
 ```
 ```python
 # Initialize the Model, Loss Function, and Optimizer
 model =PeopleClassifier(input_size=X_train.shape[1])
 criterion =nn.CrossEntropyLoss()
 optimizer =optim.Adam(model.parameters(),lr=0.001)
+
 
 ```
 ```python
@@ -88,26 +87,23 @@ def train_model(model,train_loader,criterion,optimizer,epochs):
 
 
 ## Dataset Information
-
-![alt text](<EXP-2 DATASET.png>)
+![alt text](<Dataset Information.png>)
 
 ## OUTPUT
 
 
 
 ### Confusion Matrix
-
-
 ![alt text](<Confusion Matrix.png>)
 
 ### Classification Report
 
 ![alt text](<Classification Report.png>)
 
-### New Sample Data Prediction
 
-![alt text](<New Sample Data PredictioN.png>)
+### New Sample Data Prediction
+![alt text](<New Sample Data Prediction.png>)
 
 
 ## RESULT
-Thus a neural network classification model for the given dataset is executed successfully.
+Thus, a neural network classification model for the given dataset as been created successfully.
